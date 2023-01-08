@@ -1,0 +1,32 @@
+Given a sorted array which is rotated at some random pivot point and a target value to search.
+If found in the array return its index, otherwise return -1.
+
+def rotated_array_search(lst, target):
+    give three pointers:
+    left, right, ret = 0, length of input list - 1, -1
+    ret = -1 because if we can't find the target we return -1
+
+    while left < right:
+        mid = (left + right) // 2
+
+        if lst[mid] == target:
+            return mid
+
+        elif target's value less than the lst[mid]'s value:
+            if target's value also less than the lst[left]'s value:
+                (which means we need to find from the right side of the split point)
+                (so we find it on the right side of the lst)
+                left = mid + 1
+            else:
+                (which means rotation is not exist on the left side of the lst)
+                right = mid - 1
+
+        else: (target's value > than lst[mid])
+            if  target > lst[right]:
+                (which means the rotation emerge on the right side of the lst and our target is on the left side of the lst)
+                right = mid - 1
+            else:
+                (target < lst[right]):
+                left = mid + 1
+        return ret
+

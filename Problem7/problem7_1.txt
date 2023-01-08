@@ -1,0 +1,27 @@
+class RouterTrieNode:
+    def __init__(self, handler = None):
+         self.children
+         self.handler
+    
+    def insert(self, path):
+        if path not in self.children:
+            insert it
+
+class RouteTrie:
+    def __init__(self, handler = None):
+        self.root = RouteTrieNode(handler)
+    
+    def insert(self, path_lst, handler = None):
+        curr = self.root
+        for p in path_lst:
+            insert p into curr
+            iterate the curr
+        define the curr.handler = handler
+
+    def find(self, path_lst):
+        curr = self.root
+        for p in path_lst:
+            if p not in curr.children.keys():
+                return None
+            iterate curr
+        return curr.handler

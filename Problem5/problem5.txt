@@ -1,0 +1,37 @@
+
+class TrieNode:
+    def __init__(self):
+        self.is word
+        self.children in dictionary type
+
+    def insert(self, char):
+        if char not in self.chidren:
+            then we make char as the key and a TrieNode as the value in the self.children dictionary
+
+    def suffixes(self, suffix):
+        if suffix not in self.children.keys():
+            return Empty list
+        
+        lst = []
+        this = self.children[suffix]
+        go to each of thier children recersivly using the method similar to the DFS when we searching the tree
+        return lst
+
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word):
+        curr = self.root
+        for char in word:
+            curr.insert(char)
+            curr = curr.children[char]
+        when the for loop done make the curr.is_word equals to True
+
+    def find(self, prefix):
+        curr = self.root
+        for char in perfix:
+            if char not in curr.children:
+                return False
+            curr = curr.children[char]
+        return curr

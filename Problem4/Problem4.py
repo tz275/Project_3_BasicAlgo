@@ -1,31 +1,33 @@
+def swap(lst, i, j):
+    lst[i], lst[j] = lst[j], lst[i]
+    return
+
+
 def sort_012(lst):
     """
     Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal.
 
     Args:
-       input_list(list): List to be sorted
+       lst(list): List to be sorted
     """
-    # Initialize counters for 0, 1, and 2
-    zero_count = 0
-    one_count = 0
-    two_count = 0
+    if not lst:
+        raise Exception("Input is None")
 
-    # Count the number of 0s, 1s, and 2s in the list
-    for num in lst:
-        if num == 0:
-            zero_count += 1
-        elif num == 1:
-            one_count += 1
-        elif num == 2:
-            two_count += 1
-
-    # Replace the elements in the list with the appropriate number of 0s, 1s, and 2s
-    lst[:zero_count] = [0] * zero_count
-    lst[zero_count:zero_count + one_count] = [1] * one_count
-    lst[zero_count + one_count:] = [2] * two_count
+    i_0, i_1, i_2 = 0, 0, len(lst) - 1
+    while i_1 <= i_2:
+        m = lst[i_1]
+        if m not in [0, 1, 2]:
+            raise Exception("Wrong Value in the Given List!")
+        if m == 0:
+            swap(lst, i_0, i_1)
+            i_0 += 1
+            i_1 += 1
+        elif m == 1:
+            i_1 += 1
+        else:
+            swap(lst, i_1, i_2)
+            i_2 -= 1
     return lst
-
-print(sort_012([1,2,2,2]))
 
 
 def test_function(test_case):
@@ -36,6 +38,22 @@ def test_function(test_case):
     else:
         print("Fail")
 
+
 test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+
+# Edge Test Cases:
+try:
+    sort_012([1, 2, 3, 4, 5, 6])
+    print("Fail")
+except:
+    print("Pass")
+
+try:
+    sort_012([])
+    print("Fail")
+except:
+    print("Pass")
+
+

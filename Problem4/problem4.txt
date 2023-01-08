@@ -1,0 +1,33 @@
+Given an input array consisting on only 0, 1, and 2, sort the array in a single traversal.
+This function is to sort an array only contains 3 value of elements (0, 1, 2) with time complexity of O(n) and space complexity of O(1).
+
+def sort_012(lst):
+    # Deal with the exception
+    if lst == None:
+        Error!!!
+    
+    # give 3 pointers
+    # i_0 record the position of where should we place the 0 if we find one in the list
+    # i_1 record the process of the iteration in the while loop below
+    # i_2 recordn the position of where should we place the 2 if we find one in the list
+    i_0, i_1, i_2 = 0, 0, len(lst) - 1
+
+    while i_0 < i_2:
+        m = lst[i_1]
+
+        # Deal with the exception
+        if m not in [0, 1, 2]:
+            ERROR!!!
+        
+        if m == 0:
+            swap the elements on i_0 and i_1
+            i_0 += 1
+            i_1 += 1
+        elif m == 1:
+            i_1 += 1
+        else:
+            swap the elements on i_1 and i_2
+            i_2 -= 1
+    return lst
+        
+    

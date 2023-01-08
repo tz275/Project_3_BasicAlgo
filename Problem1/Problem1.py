@@ -1,4 +1,12 @@
 def floor(x):
+    """
+    floor the input value
+
+    Args:
+        x(int or float): Number to find the floor value
+    Returns:
+        int: Floored input
+    """
     return int(x // 1)
 
 
@@ -11,6 +19,9 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
     """
+    if number == None:
+        raise Exception("Input is None!")
+
     start = 0
     ret, end = 1, number
 
@@ -21,7 +32,7 @@ def sqrt(number):
             ret = mid
             break
 
-        if mid**2 < number:
+        elif mid**2 < number:
             start = mid + 1
             ret = mid
 
@@ -36,5 +47,12 @@ print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+
+# Edged Test Cases
+print(sqrt(11.11111))
+try:
+    sqrt()
+except:
+    print("Pass")
 
 

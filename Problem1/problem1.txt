@@ -1,0 +1,31 @@
+Find the square root of the integer and floor the answer.
+
+To accomplish the goal. I split this questino into 2 parts.
+1) find the squre root
+2) floor the squre root
+
+def sqrt(x):
+    start = lowest possible answer (start from 0)
+    ret = the final answer
+    end = number
+
+    while start <= end:
+        mid = int((start + end) / 2)
+
+        if mid ** 2 == number:
+            return floor(mid) (which is exactly the answer)
+
+        elif mid ** 2 < number:
+            (like 2**2 = 4 < 5)
+            we need to find the answer greater than the mid
+            start = mid + 1
+            also renew the ret variable in case we can't find the exact mid value and we need to floor it
+            ret = mid
+
+        else:
+            (like 3**3 = 6 > 5)
+            we need to find the answer smaller than the mid
+            end = mid - 1
+            we don't renew the ret variable is because we find the squart root the the input
+    
+    return floor(ret)

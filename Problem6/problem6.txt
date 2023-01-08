@@ -1,0 +1,13 @@
+In this problem, we will look for smallest and largest integer from a list of unsorted integers. 
+The code should run in O(n) time. Do not use Python's inbuilt functions to find min and max.
+
+Because our expected run time complexity is O(n).
+def get_min_max(ints):
+     s, l = -inf, inf
+
+     for i in ints:
+        if i < s:
+            renew s
+        if i > l:
+            renew l
+    return (s, l)

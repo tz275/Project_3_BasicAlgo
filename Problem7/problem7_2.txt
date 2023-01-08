@@ -1,0 +1,18 @@
+class Router:
+    def __init__(self handle = None, not_found = None):
+        self.route_trie = RouteTrie(handle)
+        self.route_trie_not_found = not_found
+
+    def add_handler(self, path, handle):
+        split the path
+        use the inser function in the RouteTrie class
+
+    def lookup(self, path):
+        split the path
+        use find function provided by the RouteTrie class
+        if handel:
+            return it
+        reuturn not_found
+    
+    def split_path(self, path):
+        return path.split('/')

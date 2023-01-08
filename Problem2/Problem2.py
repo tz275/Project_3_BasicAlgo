@@ -7,6 +7,11 @@ def rotated_array_search(input_list, target):
     Returns:
        int: Index or -1
     """
+    if not input_list and not target:
+        raise Exception("Inputs are None!")
+    if not input_list or not target:
+        raise Exception("One of the input is None!")
+
     left, right, ret = 0, len(input_list) - 1, -1
     while left <= right:
         mid = int((left + right) / 2)
@@ -51,3 +56,14 @@ test_function([[6, 7, 8, 9, 10, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+
+# Edged Test Cases
+try:
+    rotated_array_search()
+except:
+    print("Pass")
+
+try:
+    rotated_array_search([7,8,9,2,3],)
+except:
+    print("Pass")

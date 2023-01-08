@@ -1,0 +1,48 @@
+Rearrange Array Elements so as to form two number such that their sum is maximum. 
+Return these two numbers. 
+You can assume that all array elements are in the range [0, 9]. 
+The number of digits in both the numbers cannot differ by more than 1. 
+You're not allowed to use any sorting function that Python provides and the expected time complexity is O(nlog(n)).
+
+To achieve the goal, I split this problem into 2 sub problems.
+1) Select: select the k'th largest element in the array
+2) Arrange: recursively arrange the largest and second largest into different group
+
+To make the select algorithm in the efficient way. I decide to use the quick and divide algorithm to achieve the goal.
+def quickSelect(lst, index):
+
+    # Base Case:
+        if not lst:
+            return None
+
+    # ramdonly pick a element in the array as the pivot
+    pivot = lst[-1]
+
+    # split the array
+    left = all the elemnts smaller than the pivot
+    right = all the elements greater than the pivot
+
+    if our index smaller than the length of the left array:
+        delete the right side of the array and recurslve the function again
+
+    elif our index equals to the length of the left array:
+        which means we find the right pivot and we need to return int
+    
+    else:
+        which means we need to find answer on the right side of the array recursively
+        because we delete the "left" array we need also less the lenght of the left array from the index also less the pivot's index from the index which is one.
+
+def rearrange_digits(input_list):
+    ret1, ret2 = [], []
+    for i in range(1, len(input_list) + 1) and reverse it:
+        if i is divisible by 2:
+            append it into ret1
+        else:
+            append it into ret2
+    convert ret1 and ret 2 from the list type into the int type
+    return ret1 and ret 2
+
+
+    
+
+
