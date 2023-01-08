@@ -33,6 +33,8 @@ def rearrange_digits(input_list):
     return ret
 
 
+
+
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
     solution = test_case[1]
