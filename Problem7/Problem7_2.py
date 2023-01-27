@@ -1,5 +1,6 @@
 from Problem7_1 import RouteTrie, RouteTrieNode
 
+
 # The Router class will wrap the Trie and handle 
 class Router:
     def __init__(self, handle = None, not_found = None):

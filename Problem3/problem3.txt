@@ -9,38 +9,27 @@ To achieve the goal, I split this problem into 2 sub problems.
 2) Arrange: recursively arrange the largest and second largest into different group
 
 To make the select algorithm in the efficient way. I decide to use the quick and divide algorithm to achieve the goal.
-def quickSelect(lst, index):
-
-    # Base Case:
-        if not lst:
-            return None
-
-    # ramdonly pick a element in the array as the pivot
-    pivot = lst[-1]
-
-    # split the array
-    left = all the elemnts smaller than the pivot
-    right = all the elements greater than the pivot
-
-    if our index smaller than the length of the left array:
-        delete the right side of the array and recurslve the function again
-
-    elif our index equals to the length of the left array:
-        which means we find the right pivot and we need to return int
-    
-    else:
-        which means we need to find answer on the right side of the array recursively
-        because we delete the "left" array we need also less the lenght of the left array from the index also less the pivot's index from the index which is one.
+def quickSort(input_list, low, high):
+        sort the whole array
 
 def rearrange_digits(input_list):
-    ret1, ret2 = [], []
-    for i in range(1, len(input_list) + 1) and reverse it:
-        if i is divisible by 2:
-            append it into ret1
-        else:
-            append it into ret2
-    convert ret1 and ret 2 from the list type into the int type
-    return ret1 and ret 2
+        ret1, ret2 = [], []
+        for i in range(1, len(input_list) + 1) and reverse it:
+            if i is divisible by 2:
+                append it into ret1
+            else:
+                append it into ret2
+        convert ret1 and ret 2 from the list type into the int type
+        return ret1 and ret 2
+
+The main element that decide the function's run time is the soring part. And I choose to use the quick sort
+algorithm is because of the smallest run time compare to other sorting algorithms like merge sort, bubble sort, etc.
+
+Big O Analysis:
+the run time of the entire function should be O(nlog(n)). Because the run time of the sorting algorithm that I used
+is O(nlog(n)). Even there is another for loop in the rearrange_digits function, but their relationship should be adding.
+Which means the run time should be nlog(n) + n. When we consider the worst case the run time will be O(nlog(n)).
+And space complexity is O(n) because O(2n) = O(n).
 
 
     

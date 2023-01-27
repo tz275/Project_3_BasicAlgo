@@ -5,14 +5,16 @@ class Router:
 
     def add_handler(self, path, handle):
         split the path
-        use the inser function in the RouteTrie class
+        use the insert function in the RouteTrie class
+    The time complexity is O(n) because the run time of the insert method called in this function is O(n)
 
     def lookup(self, path):
         split the path
         use find function provided by the RouteTrie class
         if handel:
             return it
-        reuturn not_found
+        return not_found
+    The time complexity is O(1) because it runs in the constant time.
     
     def split_path(self, path):
         return path.split('/')

@@ -30,3 +30,9 @@ def rotated_array_search(lst, target):
                 left = mid + 1
         return ret
 
+I approached the function this way is because the runtime will be O(log(n)) which match the requirement.
+
+Big O Analysis:
+Because of the Divide and Conquer technic the runtime is O(log(n)). I cut the possible answers half-and-half recursively.
+The space complexity is O(n) because there is no additional variables are created in this function.
+

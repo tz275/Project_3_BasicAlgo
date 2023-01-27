@@ -26,13 +26,13 @@ def sqrt(number):
     ret, end = 1, number
 
     while start <= end:
-        mid = int((start + end)/2)
+        mid = int((start + end) / 2)
 
-        if mid**2 == number:
+        if mid ** 2 == number:
             ret = mid
             break
 
-        elif mid**2 < number:
+        elif mid ** 2 < number:
             start = mid + 1
             ret = mid
 
@@ -42,11 +42,11 @@ def sqrt(number):
     return floor(ret)
 
 
-print ("Pass" if  (3 == sqrt(9)) else "Fail")
-print ("Pass" if  (0 == sqrt(0)) else "Fail")
-print ("Pass" if  (4 == sqrt(16)) else "Fail")
-print ("Pass" if  (1 == sqrt(1)) else "Fail")
-print ("Pass" if  (5 == sqrt(27)) else "Fail")
+print("Pass" if (3 == sqrt(9)) else "Fail")
+print("Pass" if (0 == sqrt(0)) else "Fail")
+print("Pass" if (4 == sqrt(16)) else "Fail")
+print("Pass" if (1 == sqrt(1)) else "Fail")
+print("Pass" if (5 == sqrt(27)) else "Fail")
 
 # Edged Test Cases
 print(sqrt(11.11111))
@@ -54,5 +54,3 @@ try:
     sqrt()
 except:
     print("Pass")
-
-

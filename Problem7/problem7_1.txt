@@ -6,6 +6,7 @@ class RouterTrieNode:
     def insert(self, path):
         if path not in self.children:
             insert it
+    The time complexity of this function is O(1) because it runs in a constant time
 
 class RouteTrie:
     def __init__(self, handler = None):
@@ -17,6 +18,7 @@ class RouteTrie:
             insert p into curr
             iterate the curr
         define the curr.handler = handler
+    The run time of this function is O(n) because there is a loop exist in the function
 
     def find(self, path_lst):
         curr = self.root
@@ -25,3 +27,4 @@ class RouteTrie:
                 return None
             iterate curr
         return curr.handler
+    The run time of this function is O(n) because there is a loop exist in the function
