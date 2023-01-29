@@ -35,3 +35,9 @@ class Trie:
                 return False
             curr = curr.children[char]
         return curr
+
+Our main purpose is finding suffixes efficiently. There are several data structures might support us to
+achieve our goal, but I'm mainly considering using tree structures to implement. In the designing part.
+I occasionally find out making the dictionary data structure recursive is a good way to reduce the run time
+complexity and space complexity compare to using the normal multi children tree node data structure.
+Thus, the Trie data structure become the first choice to implement.

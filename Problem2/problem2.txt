@@ -30,9 +30,13 @@ def rotated_array_search(lst, target):
                 left = mid + 1
         return ret
 
-I approached the function this way is because the runtime will be O(log(n)) which match the requirement.
+I use the Binary Search algorithm to approach this function.
+Because the runtime will be O(log(n)) which is relatively low compare to other algorithms.
 
-Big O Analysis:
+Time Complexity:
 Because of the Divide and Conquer technic the runtime is O(log(n)). I cut the possible answers half-and-half recursively.
-The space complexity is O(n) because there is no additional variables are created in this function.
+
+Space Complexity:
+I created total 4 additional variables in the function "rotated_array_search" and they will be constant,
+thus the space complexity of this function is O(1)
 

@@ -12,6 +12,8 @@ def get_min_max(ints):
             renew l
     return (s, l)
 
-Big O Analysis:
+Time Complexity:
 The time complexity is O(n) because there is only one loop in the function.
-The space complexity is O(1) because the space complexity is constant
+
+Space Complexity:
+The space complexity is O(1) because the number of created variables is constant.

@@ -1,4 +1,4 @@
-Rearrange Array Elements so as to form two number such that their sum is maximum. 
+Rearrange Array Elements so as to form two number such that their sum is maximum.
 Return these two numbers. 
 You can assume that all array elements are in the range [0, 9]. 
 The number of digits in both the numbers cannot differ by more than 1. 
@@ -25,11 +25,18 @@ def rearrange_digits(input_list):
 The main element that decide the function's run time is the soring part. And I choose to use the quick sort
 algorithm is because of the smallest run time compare to other sorting algorithms like merge sort, bubble sort, etc.
 
-Big O Analysis:
+Time Complexity:
 the run time of the entire function should be O(nlog(n)). Because the run time of the sorting algorithm that I used
 is O(nlog(n)). Even there is another for loop in the rearrange_digits function, but their relationship should be adding.
 Which means the run time should be nlog(n) + n. When we consider the worst case the run time will be O(nlog(n)).
-And space complexity is O(n) because O(2n) = O(n).
+
+Space Complexity:
+The space complexity of the function "partitioning" is O(1), due to the variables that has been created is constant.
+However, the function "quickSort" recursively divide and combine the split array.
+The space complexity of the "quickSort" function is O(log(n))
+When we applied the quicksort function into the "rearrange_digits" function. The space complexity should be the same as
+the quicksort function. Because the additional variables created in the "rearrange_digits" function is constant.
+
 
 
     

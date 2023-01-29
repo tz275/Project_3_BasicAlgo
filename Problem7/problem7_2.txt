@@ -18,3 +18,7 @@ class Router:
     
     def split_path(self, path):
         return path.split('/')
+
+The main go is to store HTTP Routers which also could be implemented in most of the tree data structures.
+Using hash table (dictionary) is the best way to store string data type. Thus, I choose to implement the
+Trie data structure in this task.

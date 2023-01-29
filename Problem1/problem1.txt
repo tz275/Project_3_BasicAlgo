@@ -30,8 +30,12 @@ def sqrt(x):
     
     return floor(ret)
 
-I approached the goal this way is because the run time will be optimized by using the divide and conquer technique.
+I choose to use the "Binary Search" algorithm to approach this problem.
+Because the run time will be optimized by using this divide and conquer technique.
 
-Big O Analysis:
+Time Complexity:
 Run time complexity of the sqrt function is O(log(n)) due to the divided and conquer algorithm that I applied in this function.
-Space complexity is n because no additional variables are created in this function.
+
+Space complexity:
+I created total 4 additional variables in this function (start, end, ret, mid). Because the number of the variables I
+need to create is constant in this case. The space complexity of this function is O(1).

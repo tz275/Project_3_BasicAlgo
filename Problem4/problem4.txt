@@ -32,8 +32,10 @@ def sort_012(lst):
 
 I choose to use 3 pointers and a while loop to approach due to the small time complexity and small space complexity.
 
-Big O Analysis:
+Time Complexity:
 The run time is O(n) because there is only one loop in the function and no other duplicate work has done in the function.
-The space complexity is O(n) because there is no additional variables are created in the function.
+
+Space Compelxity:
+The space complexity is O(1) because the number of additional variables are created in the function is constant.
         
     

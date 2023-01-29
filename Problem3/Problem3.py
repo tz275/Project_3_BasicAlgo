@@ -54,6 +54,6 @@ test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_case = [[4, 6, 2, 5, 9, 8], [964, 852]]
 test_function(test_case)
 
-# Edge Cases
+# Edged Test Cases
 print(rearrange_digits([]))
 print(rearrange_digits())
